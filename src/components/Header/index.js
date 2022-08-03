@@ -4,7 +4,7 @@ import IconClose from '../../assets/close.svg';
 import './styles.css'
 
 export function Header() {
-    const { inputValue, setInputValue, handleFilter, clear } = useContext(ProductContext);
+    const { inputValue, setInputValue, clear } = useContext(ProductContext);
 
     return (
         <header>
@@ -14,7 +14,6 @@ export function Header() {
                 placeholder="Search"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={(e) => handleFilter(e)}
             />
             {inputValue.trim() &&
                 <img

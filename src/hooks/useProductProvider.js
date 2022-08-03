@@ -6,27 +6,7 @@ function useProductProvider() {
     const [fruits, setFruits] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
-    const handleFilter = (e) => {
-        const filterItem = [];
-        dbFruits.forEach(item => {
-            if (item.name.toLowerCase().includes(e.target.value.toLowerCase())) {
-                filterItem.push(item);
-            }
-        });
-        if (e.target.value.trim()) {
-            setFruits([...filterItem]);
-        }
-
-        if (!e.target.value.trim()) {
-            setFruits([...dbFruits]);
-            setInputValue('');
-        }
-    }
-
-    const clear = () => {
-        setInputValue('');
-        setFruits([...dbFruits]);
-    }
+    const filtered = fruits.filter(item => item.name.includes(inputValue));
 
     useEffect(() => {
         setFruits([...dbFruits]);
@@ -38,8 +18,7 @@ function useProductProvider() {
         setFruits,
         inputValue,
         setInputValue,
-        handleFilter,
-        clear
+        filtered
     }
 }
 
