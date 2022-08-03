@@ -1,8 +1,8 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import ProductContext from '../../contexts/ProductContext';
 import './styles.css';
 
-function Products() {
+export function Products() {
     const { fruits } = useContext(ProductContext);
     return (
         <div className="content">
@@ -17,5 +17,3 @@ function Products() {
         </div>
     )
 }
-
-export default Products

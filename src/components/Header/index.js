@@ -3,7 +3,7 @@ import ProductContext from '../../contexts/ProductContext';
 import IconClose from '../../assets/close.svg';
 import './styles.css'
 
-function Header() {
+export function Header() {
     const { inputValue, setInputValue, handleFilter, clear } = useContext(ProductContext);
 
     return (
@@ -27,5 +27,3 @@ function Header() {
         </header>
     )
 }
-
-export default Header;

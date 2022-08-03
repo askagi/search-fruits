@@ -18,7 +18,15 @@
     cursor: pointer;
 }
 
-li p {
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px 40px;
+}
+
+li span {
     min-width: 100%;
     padding: 10%;
     font-size: 150%;
@@ -39,7 +47,7 @@ li p {
 
 .image {
     width: 100%;
-    height: 25vh;
+    height: 170px;
     background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80');
     background-position: center;
     background-repeat: no-repeat;
